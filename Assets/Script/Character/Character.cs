@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class Character : VolleyBulleGO
 {
     [SerializeField]
     private Rigidbody _rgbd;
 
     [SerializeField] 
-    private float _speed, _xBoost=1.5f, _zBoost=1.1f, _yBoost = 2f;
+    private float _speed, _xBoost=1.5f, _zBoost=.5f, _yBoost = 2f;
     private Vector3 _velocity;
 
     private float _hAxis, _vAxis;
@@ -24,6 +24,8 @@ public class Character : MonoBehaviour
 
         _velocity = _velocity.normalized*_speed*Time.fixedDeltaTime;
 
+        Debug.Log(_velocity);
+
         _rgbd.MovePosition(_rgbd.position + _velocity);   
     }
 
@@ -32,8 +34,8 @@ public class Character : MonoBehaviour
         var bubbleCollision = collision.gameObject.GetComponent<BubbleMovement>();
         if(bubbleCollision != null)
         {
-            var frwrdV = Vector3.forward * Mathf.Max(.5f, Mathf.Abs(_hAxis)* _zBoost);
-            var rightV = Vector3.right * Mathf.Max(1, _vAxis * _xBoost);
+            var frwrdV = Vector3.forward * Mathf.Abs(_vAxis)* _zBoost *Mathf.Sign(_vAxis);
+            var rightV = Vector3.right * Mathf.Max(1, _hAxis * _xBoost);
             bubbleCollision.Bounce(rightV+frwrdV+Vector3.up*_yBoost);
         }
     }
