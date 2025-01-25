@@ -1,12 +1,15 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    private Transform _engageTransform;
-    private BubbleMovement _bubbleReference;
+    [HideInInspector]
+    public Transform engageTransform;
+    [HideInInspector]
+    public BubbleReferencer bubbleReference;
     private void Awake()
     {
         if (instance == null)
@@ -21,19 +24,33 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Engage()
+    public void LaunchEngage(bool waitTime = true)
     {
-        transform.position = _engageTransform.position;
+        bubbleReference.transform.position = engageTransform.position;
+        bubbleReference.Rigidbody.useGravity = false;
+        bubbleReference.Rigidbody.linearVelocity = Vector3.zero;
+        var wt = waitTime ? 1:0;
+        StartCoroutine(DelayedAction(Engage, wt));
+    }
+    private void Engage()
+    {
+        bubbleReference.Rigidbody.linearVelocity.Showlog();
+        bubbleReference.Rigidbody.useGravity = true;
         var leftOrRight = -1;
-        _bubbleReference.Bounce(Vector3.right * leftOrRight + Vector3.up);
+        bubbleReference.BubbleMovement.Bounce(Vector3.right * leftOrRight + Vector3.up);
     }
 
     private bool IsSetUp()
     {
-        return _bubbleReference != null && _engageTransform !=null;
+        return bubbleReference != null && engageTransform !=null;
     }
 
 
+    public IEnumerator DelayedAction(UnityAction action, float f = 1)
+    {
+        yield return new WaitForSeconds(f);
+        action.Invoke();
+    }
     private IEnumerator WaitForLaunch()
     {
         yield return new WaitUntil(IsSetUp);
