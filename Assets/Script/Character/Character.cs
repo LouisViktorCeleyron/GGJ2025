@@ -59,11 +59,18 @@ public class Character : VolleyBulleGO
     private void OnCollisionEnter(Collision collision)
     {
         var bubbleCollision = collision.gameObject.GetComponent<BubbleMovement>();
+        
         if(bubbleCollision != null)
         {
+            if(!_isBlowing)
+            {
+
+            }
+
             var frwrdV = Vector3.forward * Mathf.Abs(_vAxis)* _zBoost *Mathf.Sign(_vAxis);
             var rightV = Vector3.right * Mathf.Max(1, _hAxis * _xBoost);
             bubbleCollision.Bounce(rightV+frwrdV+Vector3.up*_yBoost);
+
         }
     }
 
