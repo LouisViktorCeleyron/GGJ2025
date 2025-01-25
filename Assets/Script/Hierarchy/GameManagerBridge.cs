@@ -1,11 +1,15 @@
 using UnityEngine;
 
-public class GameManagerBridge : MonoBehaviour
+public class GameManagerBridge : VolleyBulleGO
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    [SerializeField]
+    private Transform _engageTransform;
+
+
     void Start()
     {
-        
+        _GameManager.engageTransform = _engageTransform;
     }
 
     // Update is called once per frame

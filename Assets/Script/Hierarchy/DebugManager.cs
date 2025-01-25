@@ -21,7 +21,16 @@ public class DebugManager : VolleyBulleGO
 
         if (GUILayout.Button("Engage"))
         {
-            _GameManager.Engage();
+            _GameManager.LaunchEngage(false);
         }
+    }
+
+}
+
+public static class Debugging
+{
+    public static void Showlog(this object o)
+    {
+        Debug.Log(o);
     }
 }

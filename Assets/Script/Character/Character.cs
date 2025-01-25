@@ -13,8 +13,37 @@ public class Character : VolleyBulleGO
 
     private float _hAxis, _vAxis;
 
+    private bool _isBlowing;
+    private float _blowingJauge;
+
     void Update()
     {
+        if(Input.GetKey(KeyCode.Space))
+        {
+            Blow();
+        }
+        if(Input.GetKeyUp(KeyCode.Space))
+        {
+            _isBlowing = false;
+        }
+        if (_blowingJauge < 1)
+        {
+            UnBlow();
+        }
+
+    }
+
+    private void Blow()
+    {
+        _isBlowing = true;
+        _blowingJauge -= 0.1f;
+        _blowingJauge = Mathf.Clamp01(_blowingJauge);
+    }
+
+    private void UnBlow()
+    {
+        _blowingJauge += 0.1f;
+        _blowingJauge = Mathf.Clamp01(_blowingJauge);
     }
 
     private void FixedUpdate()
@@ -23,8 +52,6 @@ public class Character : VolleyBulleGO
         _velocity.z = _vAxis = Input.GetAxisRaw("Vertical");
 
         _velocity = _velocity.normalized*_speed*Time.fixedDeltaTime;
-
-        Debug.Log(_velocity);
 
         _rgbd.MovePosition(_rgbd.position + _velocity);   
     }
@@ -39,4 +66,6 @@ public class Character : VolleyBulleGO
             bubbleCollision.Bounce(rightV+frwrdV+Vector3.up*_yBoost);
         }
     }
+
+
 }
