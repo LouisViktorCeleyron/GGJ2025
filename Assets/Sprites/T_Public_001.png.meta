@@ -122,7 +122,7 @@ TextureImporter:
       name: T_Crab_003
       rect:
         serializedVersion: 2
-        x: 1033
+        x: 1031
         y: 1547
         width: 489
         height: 501
@@ -168,8 +168,8 @@ TextureImporter:
         serializedVersion: 2
         x: 520
         y: 1571
-        width: 507
-        height: 399
+        width: 501
+        height: 406
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,6 +228,94 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: T_Public_001_1
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 1025
+        width: 471
+        height: 497
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d79d62154be664892dc32e08b30ee3
+      internalID: 1484223937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_001_2
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 512
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837732df00278084d834af09995bd920
+      internalID: -1999550842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_001_3
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 512
+        width: 483
+        height: 455
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba55381cfd3f2074d8f3078120b58ec5
+      internalID: 1420474395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_001_4
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 512
+        width: 491
+        height: 482
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8a72c0550078147b5567d435febaf0
+      internalID: -1028896475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -248,8 +336,11 @@ TextureImporter:
       T_Crab_004: -1193769651
       T_Crab_005: 567704797
       T_Crab_006: 1483417012
+      T_Public_001_0: 1774824874
       T_Public_001_1: 1484223937
       T_Public_001_2: -1999550842
+      T_Public_001_3: 1420474395
+      T_Public_001_4: -1028896475
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
