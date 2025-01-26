@@ -54,8 +54,8 @@ Material:
     - _Displacement_Noise_Scale: 0.067
     - _Displacement_Scale: 23.3
     - _Displacement_Speed: 0.1
-    - _Foam_Amount: 0.1
-    - _Foam_Cutoff: 0.4
+    - _Foam_Amount: 3.76
+    - _Foam_Cutoff: 0.28
     - _Foam_Scale: 1.62
     - _Foam_Speed: -1.5
     - _Global_Light_Day_Contribution: 0
@@ -71,9 +71,9 @@ Material:
     - _Wave_Scale: 5.7
     m_Colors:
     - _Deep_Water_Color: {r: 0.14117645, g: 0.4725096, b: 0.56078434, a: 1}
-    - _Foam_Color: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 0.70980394}
+    - _Foam_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
     - _Horizon_Color: {r: 0, g: 1, b: 0.882353, a: 1}
-    - _Shallow_Water_Color: {r: 0, g: 1, b: 0.884234, a: 0.77254903}
+    - _Shallow_Water_Color: {r: 0, g: 1, b: 0.884234, a: 0.5176471}
     - _Water_No_Light: {r: 0.01962443, g: 0.02424685, b: 0.05660379, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
