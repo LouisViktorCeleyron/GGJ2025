@@ -151,9 +151,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31fb2d0a88b79144a65f06d950ae51e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player2: 0
+  _launch: 0
   _rgbd: {fileID: 2936975435176607896}
   _spriteRenderer: {fileID: 0}
-  _speed: 2
+  _initEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _speed: 4
   _xBoost: 1.5
   _zBoost: 1.1
   _yBoost: 2
@@ -215,3 +220,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoretext: {fileID: 0}
+  _face: {fileID: 0}
