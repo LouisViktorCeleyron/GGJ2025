@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_Public_001_1
+      name: T_Public_002
       rect:
         serializedVersion: 2
         x: 512
@@ -105,7 +105,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -119,7 +119,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_2
+      name: T_Public_003
       rect:
         serializedVersion: 2
         x: 1024
@@ -127,7 +127,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -141,7 +141,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_3
+      name: T_Public_004
       rect:
         serializedVersion: 2
         x: 1536
@@ -149,7 +149,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -163,7 +163,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_4
+      name: T_Public_005
       rect:
         serializedVersion: 2
         x: 0
@@ -171,7 +171,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -185,7 +185,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_0
+      name: T_Public_001
       rect:
         serializedVersion: 2
         x: 0
@@ -193,7 +193,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -207,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_8
+      name: T_Public_009
       rect:
         serializedVersion: 2
         x: 0
@@ -215,7 +215,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -229,7 +229,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_5
+      name: T_Public_006
       rect:
         serializedVersion: 2
         x: 512
@@ -237,7 +237,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -251,7 +251,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_6
+      name: T_Public_007
       rect:
         serializedVersion: 2
         x: 1024
@@ -259,7 +259,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -273,7 +273,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_7
+      name: T_Public_008
       rect:
         serializedVersion: 2
         x: 1536
@@ -281,7 +281,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -295,7 +295,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_9
+      name: T_Public_00
       rect:
         serializedVersion: 2
         x: 512
@@ -303,7 +303,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -317,7 +317,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_10
+      name: T_Public_010
       rect:
         serializedVersion: 2
         x: 1024
@@ -325,7 +325,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -339,7 +339,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_11
+      name: T_Public_011
       rect:
         serializedVersion: 2
         x: 1536
@@ -347,7 +347,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -361,7 +361,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_12
+      name: T_Public_012
       rect:
         serializedVersion: 2
         x: 0
@@ -369,7 +369,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -383,7 +383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_13
+      name: T_Public_013
       rect:
         serializedVersion: 2
         x: 512
@@ -391,7 +391,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -405,7 +405,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_14
+      name: T_Public_014
       rect:
         serializedVersion: 2
         x: 1024
@@ -413,7 +413,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -427,7 +427,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Public_001_15
+      name: T_Public_015
       rect:
         serializedVersion: 2
         x: 1536
@@ -435,7 +435,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -462,22 +462,21 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      T_Public_001_0: 1774824874
-      T_Public_001_1: 1484223937
-      T_Public_001_10: -1247095964
-      T_Public_001_11: 1120405961
-      T_Public_001_12: 996379909
-      T_Public_001_13: 1229760745
-      T_Public_001_14: 376523709
-      T_Public_001_15: -1912061455
-      T_Public_001_2: -1999550842
-      T_Public_001_3: 1420474395
-      T_Public_001_4: -1028896475
-      T_Public_001_5: 943991316
-      T_Public_001_6: -1655474960
-      T_Public_001_7: 1288717882
-      T_Public_001_8: -849743867
-      T_Public_001_9: 994570116
+      T_Public_00: 994570116
+      T_Public_001: 1774824874
+      T_Public_002: 1484223937
+      T_Public_004: 1420474395
+      T_Public_005: -1028896475
+      T_Public_006: 943991316
+      T_Public_007: -1655474960
+      T_Public_008: 1288717882
+      T_Public_009: -849743867
+      T_Public_010: -1247095964
+      T_Public_011: 1120405961
+      T_Public_012: 996379909
+      T_Public_013: 1229760745
+      T_Public_014: 376523709
+      T_Public_015: -1912061455
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
