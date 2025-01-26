@@ -182,7 +182,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1899391738}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6c9f7dd1f4e5ea44bb7b78e032217a9c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -233,6 +233,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c9f7dd1f4e5ea44bb7b78e032217a9c, type: 3}
+--- !u!4 &10174412 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6c9f7dd1f4e5ea44bb7b78e032217a9c, type: 3}
+  m_PrefabInstance: {fileID: 10174411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &30832370
 GameObject:
   m_ObjectHideFlags: 0
@@ -2857,6 +2862,7 @@ GameObject:
   - component: {fileID: 834214294}
   - component: {fileID: 834214293}
   - component: {fileID: 834214292}
+  - component: {fileID: 834214297}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -2873,8 +2879,8 @@ Transform:
   m_GameObject: {fileID: 834214290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.94, y: 0.522, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.94, y: 0.972, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 39078407}
@@ -2892,6 +2898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoretext: {fileID: 0}
+  _face: {fileID: 0}
 --- !u!114 &834214293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2904,8 +2911,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31fb2d0a88b79144a65f06d950ae51e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player2: 0
+  _launch: 0
   _rgbd: {fileID: 834214294}
   _spriteRenderer: {fileID: 0}
+  _initEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _speed: 2
   _xBoost: 1.5
   _zBoost: 1.1
@@ -3058,6 +3070,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &834214297
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834214290}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d38532c76bf476541be0a4a1cb954918, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &865842727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a13625eed685bb7408ba901d182c1ce4, type: 3}
@@ -5387,6 +5421,8 @@ Transform:
   - {fileID: 1586611119}
   - {fileID: 449851845}
   - {fileID: 1190789234}
+  - {fileID: 10174412}
+  - {fileID: 2003678458}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1973189926
@@ -5464,7 +5500,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1899391738}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a21d2103e59533a458f0796d20d7cf36, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5515,6 +5551,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a21d2103e59533a458f0796d20d7cf36, type: 3}
+--- !u!4 &2003678458 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a21d2103e59533a458f0796d20d7cf36, type: 3}
+  m_PrefabInstance: {fileID: 2003678457}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2010752814
 GameObject:
   m_ObjectHideFlags: 0
@@ -6325,5 +6366,3 @@ SceneRoots:
   - {fileID: 1385373158}
   - {fileID: 39078407}
   - {fileID: 272284348}
-  - {fileID: 10174411}
-  - {fileID: 2003678457}

@@ -100,10 +100,10 @@ TextureImporter:
       name: T_Chara_001_0
       rect:
         serializedVersion: 2
-        x: 136
+        x: 0
         y: 1536
-        width: 241
-        height: 507
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,9 +122,9 @@ TextureImporter:
       name: T_Chara_001_1
       rect:
         serializedVersion: 2
-        x: 643
+        x: 512
         y: 1536
-        width: 250
+        width: 512
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -144,10 +144,10 @@ TextureImporter:
       name: T_Chara_001_2
       rect:
         serializedVersion: 2
-        x: 75
+        x: 0
         y: 512
-        width: 363
-        height: 492
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,6 +158,28 @@ TextureImporter:
       bones: []
       spriteID: ae8da602a709ba04c88cf2d61994bedf
       internalID: 748281909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Chara_001_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adbcc72ba5dfb714793367a1831ef356
+      internalID: -542570357
       vertices: []
       indices: 
       edges: []
@@ -179,6 +201,7 @@ TextureImporter:
       T_Chara_001_0: -1824963668
       T_Chara_001_1: -258777803
       T_Chara_001_2: 748281909
+      T_Chara_001_3: -542570357
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
