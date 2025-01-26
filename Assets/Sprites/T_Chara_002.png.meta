@@ -97,15 +97,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_Chara_002_0
+      name: C_Penguin_001
       rect:
         serializedVersion: 2
         x: 0
         y: 1536
         width: 512
         height: 512
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -119,15 +119,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Chara_002_1
+      name: C_Penguin_002
       rect:
         serializedVersion: 2
         x: 512
         y: 1536
         width: 512
         height: 512
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -141,59 +141,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Chara_002_2
+      name: C_Jimmy_001
       rect:
         serializedVersion: 2
         x: 0
-        y: 1024
+        y: 512
         width: 512
         height: 512
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6444eb9f0ba0146418010684e7b4d3d0
-      internalID: 724592517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Chara_002_3
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 514eb0c257339e248a51260e9272525a
-      internalID: -1118677723
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Chara_002_4
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 514
-        width: 512
-        height: 512
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -207,15 +163,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Chara_002_5
+      name: C_Jimmy_002
       rect:
         serializedVersion: 2
-        x: 512
+        x: 510
         y: 512
         width: 512
         height: 512
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -224,72 +180,6 @@ TextureImporter:
       bones: []
       spriteID: 7d421449cd82f3e498c0330e64a1cfc4
       internalID: 1236977692
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Chara_002_6
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b892b609923166249a7a939fd4b739c9
-      internalID: 914067670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Chara_002_7
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a4eb522fdd289b44b28ef8d4fba18ab
-      internalID: 1021789842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Chara_002_8
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abf16b6476787d54aa0406c8f5ee43dc
-      internalID: 192766240
       vertices: []
       indices: 
       edges: []
@@ -308,12 +198,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      T_Chara_002_0: 879547311
-      T_Chara_002_1: -420406338
+      C_Jimmy_001: 1550679958
+      C_Jimmy_002: 1236977692
+      C_Penguin_001: 879547311
+      C_Penguin_002: -420406338
       T_Chara_002_2: 724592517
       T_Chara_002_3: -1118677723
-      T_Chara_002_4: 1550679958
-      T_Chara_002_5: 1236977692
       T_Chara_002_6: 914067670
       T_Chara_002_7: 1021789842
       T_Chara_002_8: 192766240
