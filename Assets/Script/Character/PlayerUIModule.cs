@@ -8,7 +8,7 @@ public class PlayerUIModule : MonoBehaviour
     TextMeshProUGUI _scoretext;
 
     [SerializeField]
-    Image _face;
+    Image _face, _breath;
 
     public void UpdateScore(int score)
     {
@@ -21,4 +21,9 @@ public class PlayerUIModule : MonoBehaviour
         _face.sprite = data.icon; 
     }
 
+
+    public void UpdareBreath(float amount)
+    {
+        _breath.fillAmount = amount;
+    }
 }

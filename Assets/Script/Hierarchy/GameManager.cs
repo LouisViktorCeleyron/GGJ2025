@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
     }
+
     private bool _isLeftPlayerEngage = false;
     public void LaunchEngage(bool waitTime = true)
     {
@@ -72,7 +73,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator WaitForLaunch()
     {
         yield return new WaitUntil(IsSetUp);
-        Engage();
+        LaunchEngage();
     }
 
     private void CountPoint()

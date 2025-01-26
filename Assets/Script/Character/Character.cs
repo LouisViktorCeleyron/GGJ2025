@@ -18,6 +18,8 @@ public class Character : VolleyBulleGO
     private CharacterData _characterData;
     [SerializeField]
     private UnityEvent <CharacterData>_initEvent;
+    [SerializeField]
+    private UnityEvent<float> _onBreathChange;
 
     public void Initialize(CharacterData data)
     {
@@ -76,18 +78,22 @@ public class Character : VolleyBulleGO
     private void Blow()
     {
         _isBlowing = true;
-        _blowingJauge -= 0.1f;
-        _blowingJauge = Mathf.Clamp01(_blowingJauge);
+        UpdateBlow(.1f);
         _spriteRenderer.sprite = _characterData.spriteBlow;
     }
 
     private void UnBlow()
     {
-        _blowingJauge += 0.1f;
-        _blowingJauge = Mathf.Clamp01(_blowingJauge);
+        UpdateBlow(.05f);
         _spriteRenderer.sprite = _characterData.spriteIdle;
     }
 
+    private void UpdateBlow(float amount)
+    {
+        _blowingJauge += amount;
+        _blowingJauge = Mathf.Clamp01(_blowingJauge);
+        _onBreathChange.Invoke(_blowingJauge);
+    }
     
     private void OnCollisionEnter(Collision collision)
     {
