@@ -206,6 +206,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: T_Public_002_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c63da850ca7b1478ca4b2275e5ef05
+      internalID: -548386433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -225,6 +247,7 @@ TextureImporter:
       T_Public_002_2: 315895585
       T_Public_002_3: -796522608
       T_Public_002_4: -1544058326
+      T_Public_002_5: -548386433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
