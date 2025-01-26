@@ -100,7 +100,7 @@ public class Character : VolleyBulleGO
             if(!bubbleRef.BulleLife.IsDead)
             {
                 var frwrdV = Vector3.forward * Mathf.Abs(_vAxis)* _zBoost *Mathf.Sign(_vAxis);
-                var rightV = Vector3.right * Mathf.Max(1, _hAxis * _xBoost);
+                var rightV = Vector3.right * Mathf.Max(1, _hAxis * _xBoost)*Mathf.Sign(_xBoost);
                 bubbleCollision.Bounce(rightV+frwrdV+Vector3.up*_yBoost);
             }
             
