@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_Chara_001_0
+      name: C_Rabbit_001
       rect:
         serializedVersion: 2
         x: 0
@@ -119,11 +119,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Chara_001_1
+      name: C_Rabbit_002
       rect:
         serializedVersion: 2
-        x: 512
-        y: 1536
+        x: 517
+        y: 1531
         width: 512
         height: 512
       alignment: 7
@@ -141,7 +141,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Chara_001_2
+      name: C_Pork_001
       rect:
         serializedVersion: 2
         x: 0
@@ -163,7 +163,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Chara_001_3
+      name: C_Pork_002
       rect:
         serializedVersion: 2
         x: 512
@@ -198,10 +198,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      T_Chara_001_0: -1824963668
-      T_Chara_001_1: -258777803
-      T_Chara_001_2: 748281909
-      T_Chara_001_3: -542570357
+      C_Pork_001: 748281909
+      C_Pork_002: -542570357
+      C_Rabbit_001: -1824963668
+      C_Rabbit_002: -258777803
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
