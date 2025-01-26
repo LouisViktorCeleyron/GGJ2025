@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Character : VolleyBulleGO
 {
@@ -15,6 +16,10 @@ public class Character : VolleyBulleGO
 
     private bool _isBlowing;
     private float _blowingJauge;
+    
+    [SerializeField]
+    private UnityEvent _onBlowFrame,_onUnblowFrame;
+
 
     void Update()
     {
@@ -38,12 +43,14 @@ public class Character : VolleyBulleGO
         _isBlowing = true;
         _blowingJauge -= 0.1f;
         _blowingJauge = Mathf.Clamp01(_blowingJauge);
+        _onBlowFrame.Invoke();
     }
 
     private void UnBlow()
     {
         _blowingJauge += 0.1f;
         _blowingJauge = Mathf.Clamp01(_blowingJauge);
+        _onUnblowFrame.Invoke();
     }
 
     private void FixedUpdate()
@@ -58,18 +65,22 @@ public class Character : VolleyBulleGO
 
     private void OnCollisionEnter(Collision collision)
     {
-        var bubbleCollision = collision.gameObject.GetComponent<BubbleMovement>();
+        var bubbleRef = collision.gameObject.GetComponent<BubbleReferencer>();
         
-        if(bubbleCollision != null)
+        if(bubbleRef != null)
         {
+            var bubbleCollision = bubbleRef.BubbleMovement;
+            if(!bubbleRef.BulleLife.IsDead)
+            {
+                var frwrdV = Vector3.forward * Mathf.Abs(_vAxis)* _zBoost *Mathf.Sign(_vAxis);
+                var rightV = Vector3.right * Mathf.Max(1, _hAxis * _xBoost);
+                bubbleCollision.Bounce(rightV+frwrdV+Vector3.up*_yBoost);
+            }
+            
             if(!_isBlowing)
             {
-
+                bubbleRef.BulleLife.ReduceHp(1);
             }
-
-            var frwrdV = Vector3.forward * Mathf.Abs(_vAxis)* _zBoost *Mathf.Sign(_vAxis);
-            var rightV = Vector3.right * Mathf.Max(1, _hAxis * _xBoost);
-            bubbleCollision.Bounce(rightV+frwrdV+Vector3.up*_yBoost);
 
         }
     }

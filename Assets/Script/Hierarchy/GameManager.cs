@@ -26,15 +26,18 @@ public class GameManager : MonoBehaviour
 
     public void LaunchEngage(bool waitTime = true)
     {
+        bubbleReference.BulleLife.ResetHp();
         bubbleReference.transform.position = engageTransform.position;
         bubbleReference.Rigidbody.useGravity = false;
-        bubbleReference.Rigidbody.linearVelocity = Vector3.zero;
+        bubbleReference.Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+
+        
         var wt = waitTime ? 1:0;
         StartCoroutine(DelayedAction(Engage, wt));
     }
     private void Engage()
     {
-        bubbleReference.Rigidbody.linearVelocity.Showlog();
+        bubbleReference.Rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
         bubbleReference.Rigidbody.useGravity = true;
         var leftOrRight = -1;
         bubbleReference.BubbleMovement.Bounce(Vector3.right * leftOrRight + Vector3.up);

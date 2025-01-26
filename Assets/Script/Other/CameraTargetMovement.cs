@@ -12,6 +12,7 @@ public class CameraTargetMovement : VolleyBulleGO
         _ballTransform = _GameManager.bubbleReference.transform;
     }
 
+
     void Update()
     {
         var x = Mathf.Clamp(_ballTransform.position.x,-_minMax,_minMax);

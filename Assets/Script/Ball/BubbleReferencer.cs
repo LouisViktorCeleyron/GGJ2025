@@ -13,7 +13,7 @@ public class BubbleReferencer : VolleyBulleGO
     private Rigidbody _rigidbody;
     public Rigidbody Rigidbody => _rigidbody;
 
-    void Start()
+    void Awake()
     {
         _GameManager.bubbleReference = this;
     }
