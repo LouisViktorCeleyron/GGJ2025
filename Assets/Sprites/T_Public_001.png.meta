@@ -97,147 +97,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_Crab_001
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 1571
-        width: 483
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3902da382bafcbe4a98a678a0c890bb7
-      internalID: -637808481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Crab_003
-      rect:
-        serializedVersion: 2
-        x: 1031
-        y: 1547
-        width: 489
-        height: 501
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70a197e78dc3842469f2f1afef1c39e4
-      internalID: -739321085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Crab_004
-      rect:
-        serializedVersion: 2
-        x: 1520
-        y: 1571
-        width: 520
-        height: 429
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f415f7c9a4e5dc4c899a1a6d1429c2f
-      internalID: -1193769651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Crab_002
-      rect:
-        serializedVersion: 2
-        x: 520
-        y: 1571
-        width: 501
-        height: 406
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7065274fe06b6564595285d4bb6f8985
-      internalID: -1891690929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Crab_005
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 1024
-        width: 470
-        height: 500
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69152136b7847e04398f4e1d7d440119
-      internalID: 567704797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_Crab_006
-      rect:
-        serializedVersion: 2
-        x: 520
-        y: 1024
-        width: 501
-        height: 413
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0724485a57be12547997b79faa34fb76
-      internalID: 1483417012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: T_Public_001_1
       rect:
         serializedVersion: 2
-        x: 1045
-        y: 1025
-        width: 471
-        height: 497
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -254,12 +122,12 @@ TextureImporter:
       name: T_Public_001_2
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 1024
+        x: 1024
+        y: 1536
         width: 512
-        height: 450
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -276,12 +144,12 @@ TextureImporter:
       name: T_Public_001_3
       rect:
         serializedVersion: 2
-        x: 15
-        y: 512
-        width: 483
-        height: 455
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -298,12 +166,12 @@ TextureImporter:
       name: T_Public_001_4
       rect:
         serializedVersion: 2
-        x: 523
-        y: 512
-        width: 491
-        height: 482
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -320,10 +188,10 @@ TextureImporter:
       name: T_Public_001_0
       rect:
         serializedVersion: 2
-        x: 1039
-        y: 508
-        width: 492
-        height: 500
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,10 +210,10 @@ TextureImporter:
       name: T_Public_001_8
       rect:
         serializedVersion: 2
-        x: 1542
+        x: 0
         y: 512
-        width: 501
-        height: 504
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -356,6 +224,226 @@ TextureImporter:
       bones: []
       spriteID: bcf23c125c516664aaf9dc72d06f3834
       internalID: -849743867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_001_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6b7aa4d6121724b8ba417a41574cab
+      internalID: 943991316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_001_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6b2488763050b4593d3afb089843e2
+      internalID: -1655474960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_001_7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9e71590f13dac4e8d16b1fa9d8304c
+      internalID: 1288717882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_001_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5acfed1db6bfd49b2edeb60b09bdfc
+      internalID: 994570116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_001_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e04f8d937144a4bacd4ea5f28ccb55
+      internalID: -1247095964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_001_11
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb52d081fbdaa34b89f97d8be29450f
+      internalID: 1120405961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_001_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4786b2c5159ed234b83978377fbbd7d5
+      internalID: 996379909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_001_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3583bbeedec56194cb09b6fffb28e50d
+      internalID: 1229760745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_001_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce18d0b069f44b9428db9686dd8e6655
+      internalID: 376523709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_001_15
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d188915c8eff4b40a28443d99932ae9
+      internalID: -1912061455
       vertices: []
       indices: 
       edges: []
@@ -374,14 +462,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      T_Crab_001: -637808481
-      T_Crab_002: -1891690929
-      T_Crab_003: -739321085
-      T_Crab_004: -1193769651
-      T_Crab_005: 567704797
-      T_Crab_006: 1483417012
       T_Public_001_0: 1774824874
       T_Public_001_1: 1484223937
+      T_Public_001_10: -1247095964
+      T_Public_001_11: 1120405961
+      T_Public_001_12: 996379909
+      T_Public_001_13: 1229760745
+      T_Public_001_14: 376523709
+      T_Public_001_15: -1912061455
       T_Public_001_2: -1999550842
       T_Public_001_3: 1420474395
       T_Public_001_4: -1028896475
@@ -389,6 +477,7 @@ TextureImporter:
       T_Public_001_6: -1655474960
       T_Public_001_7: 1288717882
       T_Public_001_8: -849743867
+      T_Public_001_9: 994570116
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
