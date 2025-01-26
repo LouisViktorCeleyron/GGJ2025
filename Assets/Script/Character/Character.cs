@@ -5,17 +5,25 @@ using UnityEngine.Events;
 
 public class Character : VolleyBulleGO
 {
+    [SerializeField]
+    private bool _player2;
+    [SerializeField]
+    private KeyCode _launch;
+    private string _hAxName, _vAxName;
     [Header("Refs")]
     [SerializeField]
     private Rigidbody _rgbd;
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
     private CharacterData _characterData;
+    [SerializeField]
+    private UnityEvent <CharacterData>_initEvent;
 
     public void Initialize(CharacterData data)
     {
         _characterData = data;
         SpriteRenderer spriteRenderer = _spriteRenderer;
+        _initEvent.Invoke(data);
         ChangeScore(0);
     }
 
@@ -25,14 +33,19 @@ public class Character : VolleyBulleGO
     private Vector3 _velocity;
     private float _hAxis, _vAxis;
 
+    private void Awake()
+    {
+        _hAxName = _player2 ? "Horizontal2" : "Horizontal";
+        _vAxName = _player2 ? "Vertical2" : "Vertical";
+    }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(_launch))
         {
             Blow();
         }
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(_launch))
         {
             _isBlowing = false;
         }
@@ -45,8 +58,8 @@ public class Character : VolleyBulleGO
 
     private void FixedUpdate()
     {
-        _velocity.x = _hAxis = Input.GetAxisRaw("Horizontal");
-        _velocity.z = _vAxis = Input.GetAxisRaw("Vertical");
+        _velocity.x = _hAxis = Input.GetAxisRaw(_hAxName);
+        _velocity.z = _vAxis = Input.GetAxisRaw(_vAxName);
 
         _velocity = _velocity.normalized * _speed * Time.fixedDeltaTime;
 
