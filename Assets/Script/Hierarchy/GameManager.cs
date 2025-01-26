@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     public void LaunchEngage(bool waitTime = true)
     {
-        bubbleReference.BulleLife.ResetHp();
+        CountPoint();
         bubbleReference.transform.position = engageTransform.position;
         bubbleReference.Rigidbody.useGravity = false;
         bubbleReference.Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     }
     private void Engage()
     {
+        bubbleReference.BulleLife.ResetHp();
         bubbleReference.Rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
         bubbleReference.Rigidbody.useGravity = true;
         var leftOrRight = -1;
@@ -67,19 +68,19 @@ public class GameManager : MonoBehaviour
         Engage();
     }
 
-    private void CountPoint(BubbleReferencer bubble)
+    private void CountPoint()
     {
-        var bPos = bubble.transform.position;
+        var bPos = bubbleReference.transform.position;
         var netMin = engageTransform.position.x - _netTolerance;
         var netMax = engageTransform.position.x + _netTolerance;
         if(bPos.x < netMin)
         {
-            _leftChar.RiseScore(1);
+            _rightChar.RiseScore(1);
             return;
         }
         if (bPos.x > netMax)
         {
-            _rightChar.RiseScore(1);
+            _leftChar.RiseScore(1);
             return ;
         }
 
