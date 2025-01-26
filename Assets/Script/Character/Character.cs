@@ -71,22 +71,21 @@ public class Character : VolleyBulleGO
     private bool _isBlowing;
     private float _blowingJauge;
     
-    [SerializeField]
-    private UnityEvent _onBlowFrame,_onUnblowFrame;
+    
 
     private void Blow()
     {
         _isBlowing = true;
         _blowingJauge -= 0.1f;
         _blowingJauge = Mathf.Clamp01(_blowingJauge);
-        _onBlowFrame.Invoke();
+        _spriteRenderer.sprite = _characterData.spriteIdle;
     }
 
     private void UnBlow()
     {
         _blowingJauge += 0.1f;
         _blowingJauge = Mathf.Clamp01(_blowingJauge);
-        _onUnblowFrame.Invoke();
+        _spriteRenderer.sprite = _characterData.spriteBlow;
     }
 
     

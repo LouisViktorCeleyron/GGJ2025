@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.94, y: 0.522, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -154,44 +154,26 @@ MonoBehaviour:
   _player2: 0
   _launch: 0
   _rgbd: {fileID: 2936975435176607896}
-  _spriteRenderer: {fileID: 0}
+  _spriteRenderer: {fileID: 2436094883832937467}
   _initEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4350287328588877973}
+        m_TargetAssemblyTypeName: PlayerUIModule, Assembly-CSharp
+        m_MethodName: Init
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _speed: 4
   _xBoost: 1.5
   _zBoost: 1.1
   _yBoost: 2
-  _onBlowFrame:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2436094883832937467}
-        m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
-        m_MethodName: set_sprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: -258777803, guid: 303fa242999882c48889efda903eddd1, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onUnblowFrame:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2436094883832937467}
-        m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
-        m_MethodName: set_sprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: -1824963668, guid: 303fa242999882c48889efda903eddd1, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   _onScoreChanged:
     m_PersistentCalls:
       m_Calls:

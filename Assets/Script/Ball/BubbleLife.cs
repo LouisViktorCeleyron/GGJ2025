@@ -27,7 +27,7 @@ public class BubbleLife : VolleyBulleGO
         _spriteRenderer.color = Color.white;
         StopAllCoroutines();
         _isInvincible = false;
-        SetHP(_hpBase);
+        SetHP(Random.Range(_hpBase, _hpBase+3));
     }
 
     public bool SetHP(int hp)

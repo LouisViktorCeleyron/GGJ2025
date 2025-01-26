@@ -4,12 +4,13 @@ public class GameManagerBridge : VolleyBulleGO
 {
 
     [SerializeField]
-    private Transform _engageTransform;
+    private Transform _engageTransformL, _engageTransformR;
 
 
     void Start()
     {
-        _GameManager.engageTransform = _engageTransform;
+        _GameManager.engageTransformL = _engageTransformL;
+        _GameManager.engageTransformR = _engageTransformR;
     }
 
     // Update is called once per frame

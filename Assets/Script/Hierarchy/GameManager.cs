@@ -7,13 +7,14 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [HideInInspector]
-    public Transform engageTransform;
+    public Transform engageTransformL, engageTransformR;
     [HideInInspector]
     public BubbleReferencer bubbleReference;
 
     [SerializeField]
     private Character _leftChar, _rightChar;
-
+    [SerializeField]
+    private CharacterData _dataLeft, _dataRight;  
 
     [SerializeField]
     private float _netTolerance = .3f;
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             StartCoroutine(WaitForLaunch());
+            _leftChar.Initialize(_dataLeft);
+            _rightChar.Initialize(_dataRight);
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -30,11 +33,12 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
     }
-
+    private bool _isLeftPlayerEngage = false;
     public void LaunchEngage(bool waitTime = true)
     {
         CountPoint();
-        bubbleReference.transform.position = engageTransform.position;
+        _isLeftPlayerEngage = Random.Range(0f, 1f) > .5f;
+        bubbleReference.transform.position = _isLeftPlayerEngage? engageTransformL.position : engageTransformR.position;
         bubbleReference.Rigidbody.useGravity = false;
         bubbleReference.Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
 
@@ -47,13 +51,16 @@ public class GameManager : MonoBehaviour
         bubbleReference.BulleLife.ResetHp();
         bubbleReference.Rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
         bubbleReference.Rigidbody.useGravity = true;
-        var leftOrRight = -1;
-        bubbleReference.BubbleMovement.Bounce(Vector3.right * leftOrRight + Vector3.up);
+
+        var dirR = Vector3.right + Vector3.up + Vector3.back;
+        var dirL = Vector3.left+ Vector3.up + Vector3.forward;
+
+        bubbleReference.BubbleMovement.Bounce(_isLeftPlayerEngage?dirL:dirR);
     }
 
     private bool IsSetUp()
     {
-        return bubbleReference != null && engageTransform !=null;
+        return bubbleReference != null && engageTransformL !=null && engageTransformR != null;
     }
 
 
@@ -71,8 +78,8 @@ public class GameManager : MonoBehaviour
     private void CountPoint()
     {
         var bPos = bubbleReference.transform.position;
-        var netMin = engageTransform.position.x - _netTolerance;
-        var netMax = engageTransform.position.x + _netTolerance;
+        var netMin = engageTransformL.position.x - _netTolerance;
+        var netMax = engageTransformR.position.x + _netTolerance;
         if(bPos.x < netMin)
         {
             _rightChar.RiseScore(1);
