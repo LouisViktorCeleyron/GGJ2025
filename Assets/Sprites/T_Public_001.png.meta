@@ -316,6 +316,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: T_Public_001_0
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 508
+        width: 492
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c4e567fa0e96f4dacf388e15a67903
+      internalID: 1774824874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_001_8
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 512
+        width: 501
+        height: 504
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf23c125c516664aaf9dc72d06f3834
+      internalID: -849743867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -341,6 +385,10 @@ TextureImporter:
       T_Public_001_2: -1999550842
       T_Public_001_3: 1420474395
       T_Public_001_4: -1028896475
+      T_Public_001_5: 943991316
+      T_Public_001_6: -1655474960
+      T_Public_001_7: 1288717882
+      T_Public_001_8: -849743867
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
