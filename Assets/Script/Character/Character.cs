@@ -78,14 +78,14 @@ public class Character : VolleyBulleGO
         _isBlowing = true;
         _blowingJauge -= 0.1f;
         _blowingJauge = Mathf.Clamp01(_blowingJauge);
-        _spriteRenderer.sprite = _characterData.spriteIdle;
+        _spriteRenderer.sprite = _characterData.spriteBlow;
     }
 
     private void UnBlow()
     {
         _blowingJauge += 0.1f;
         _blowingJauge = Mathf.Clamp01(_blowingJauge);
-        _spriteRenderer.sprite = _characterData.spriteBlow;
+        _spriteRenderer.sprite = _characterData.spriteIdle;
     }
 
     

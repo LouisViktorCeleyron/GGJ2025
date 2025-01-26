@@ -15,7 +15,7 @@ MonoBehaviour:
   characterName: Gros Porc
   characterDescription: 
   spriteIdle: {fileID: 748281909, guid: 303fa242999882c48889efda903eddd1, type: 3}
-  spriteBlow: {fileID: 21300000, guid: bff4e85460663d14db3a266f5e3a2cad, type: 3}
+  spriteBlow: {fileID: -542570357, guid: 303fa242999882c48889efda903eddd1, type: 3}
   icon: {fileID: 225315118, guid: 1c63c96d699d1ca43b05e802446c9303, type: 3}
   iconH: {fileID: -883481690, guid: 1c63c96d699d1ca43b05e802446c9303, type: 3}
   InconU: {fileID: 2102725023, guid: 1c63c96d699d1ca43b05e802446c9303, type: 3}
