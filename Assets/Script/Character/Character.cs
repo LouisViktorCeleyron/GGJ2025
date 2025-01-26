@@ -5,38 +5,61 @@ using UnityEngine.Events;
 
 public class Character : VolleyBulleGO
 {
+    [Header("Refs")]
     [SerializeField]
     private Rigidbody _rgbd;
+    [SerializeField]
+    private SpriteRenderer _spriteRenderer;
+    private CharacterData _characterData;
 
+    public void Initialize(CharacterData data)
+    {
+        _characterData = data;
+        SpriteRenderer spriteRenderer = _spriteRenderer;
+        ChangeScore(0);
+    }
+
+    [Header("Movement")]
     [SerializeField] 
     private float _speed, _xBoost=1.5f, _zBoost=.5f, _yBoost = 2f;
     private Vector3 _velocity;
-
     private float _hAxis, _vAxis;
-
-    private bool _isBlowing;
-    private float _blowingJauge;
-    
-    [SerializeField]
-    private UnityEvent _onBlowFrame,_onUnblowFrame;
 
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             Blow();
         }
-        if(Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             _isBlowing = false;
         }
-        if (_blowingJauge < 1)
+        if (_blowingJauge < 1 && !_isBlowing)
         {
             UnBlow();
         }
 
     }
+
+    private void FixedUpdate()
+    {
+        _velocity.x = _hAxis = Input.GetAxisRaw("Horizontal");
+        _velocity.z = _vAxis = Input.GetAxisRaw("Vertical");
+
+        _velocity = _velocity.normalized * _speed * Time.fixedDeltaTime;
+
+        _rgbd.MovePosition(_rgbd.position + _velocity);
+    }
+
+
+    [Header("Blow")]
+    private bool _isBlowing;
+    private float _blowingJauge;
+    
+    [SerializeField]
+    private UnityEvent _onBlowFrame,_onUnblowFrame;
 
     private void Blow()
     {
@@ -53,16 +76,7 @@ public class Character : VolleyBulleGO
         _onUnblowFrame.Invoke();
     }
 
-    private void FixedUpdate()
-    {
-        _velocity.x = _hAxis = Input.GetAxisRaw("Horizontal");
-        _velocity.z = _vAxis = Input.GetAxisRaw("Vertical");
-
-        _velocity = _velocity.normalized*_speed*Time.fixedDeltaTime;
-
-        _rgbd.MovePosition(_rgbd.position + _velocity);   
-    }
-
+    
     private void OnCollisionEnter(Collision collision)
     {
         var bubbleRef = collision.gameObject.GetComponent<BubbleReferencer>();
@@ -86,4 +100,17 @@ public class Character : VolleyBulleGO
     }
 
 
+    [Header("Score")]
+    private int _score;
+    [SerializeField]
+    private UnityEvent<int> _onScoreChanged;
+    public void RiseScore(int amount)
+    {
+        ChangeScore(_score+amount);
+    }
+    public void ChangeScore(int score)
+    {
+        _score = score;
+        _onScoreChanged.Invoke(score);
+    }
 }

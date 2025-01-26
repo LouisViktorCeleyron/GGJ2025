@@ -15,6 +15,8 @@ public class BubbleLife : VolleyBulleGO
 
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
+
+
     [SerializeField]
     private float _invincibilityFrames = 1;
 
@@ -22,7 +24,7 @@ public class BubbleLife : VolleyBulleGO
 
     public void ResetHp()
     {
-        _spriteRenderer.enabled = true;
+        _spriteRenderer.color = Color.white;
         StopAllCoroutines();
         _isInvincible = false;
         SetHP(_hpBase);
@@ -44,10 +46,10 @@ public class BubbleLife : VolleyBulleGO
         _isInvincible = true;
         for (float i = 0f; i < _invincibilityFrames; i+=.1f)
         {
-            _spriteRenderer.enabled = !_spriteRenderer.enabled;
+            _spriteRenderer.color = i%.2f==0 ? Color.red : Color.white;
             yield return new WaitForSeconds(.1f);
         }
-        _spriteRenderer.enabled= true;
+        _spriteRenderer.color = Color.white ;
         _isInvincible = false;
     }
 

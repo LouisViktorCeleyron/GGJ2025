@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,12 +100,12 @@ TextureImporter:
       name: T_Chara_001_0
       rect:
         serializedVersion: 2
-        x: 118
-        y: 1528
-        width: 242
-        height: 514
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -122,12 +122,12 @@ TextureImporter:
       name: T_Chara_001_1
       rect:
         serializedVersion: 2
-        x: 89
-        y: 528
-        width: 363
-        height: 492
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -144,10 +144,10 @@ TextureImporter:
       name: T_Chara_001_2
       rect:
         serializedVersion: 2
-        x: 1123
-        y: 1531
-        width: 326
-        height: 517
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,6 +158,72 @@ TextureImporter:
       bones: []
       spriteID: ae8da602a709ba04c88cf2d61994bedf
       internalID: 748281909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Chara_001_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f89b7bf3512864c864ef1d05419d1b
+      internalID: 645734182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Chara_001_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5f0d983c89a1446887a0e1fbb261fd
+      internalID: -986109228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Chara_001_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96087064c9c99d4da6306651340e6c8
+      internalID: -1473444400
       vertices: []
       indices: 
       edges: []
@@ -179,6 +245,9 @@ TextureImporter:
       T_Chara_001_0: -1824963668
       T_Chara_001_1: -258777803
       T_Chara_001_2: 748281909
+      T_Chara_001_3: 645734182
+      T_Chara_001_4: -986109228
+      T_Chara_001_5: -1473444400
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

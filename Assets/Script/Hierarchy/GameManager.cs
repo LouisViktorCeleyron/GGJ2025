@@ -10,6 +10,13 @@ public class GameManager : MonoBehaviour
     public Transform engageTransform;
     [HideInInspector]
     public BubbleReferencer bubbleReference;
+
+    [SerializeField]
+    private Character _leftChar, _rightChar;
+
+
+    [SerializeField]
+    private float _netTolerance = .3f;
     private void Awake()
     {
         if (instance == null)
@@ -60,4 +67,23 @@ public class GameManager : MonoBehaviour
         Engage();
     }
 
+    private void CountPoint(BubbleReferencer bubble)
+    {
+        var bPos = bubble.transform.position;
+        var netMin = engageTransform.position.x - _netTolerance;
+        var netMax = engageTransform.position.x + _netTolerance;
+        if(bPos.x < netMin)
+        {
+            _leftChar.RiseScore(1);
+            return;
+        }
+        if (bPos.x > netMax)
+        {
+            _rightChar.RiseScore(1);
+            return ;
+        }
+
+        //equality
+
+    }
 }
