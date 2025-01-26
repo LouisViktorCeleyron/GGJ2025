@@ -4343,7 +4343,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1824963668, guid: 303fa242999882c48889efda903eddd1, type: 3}
+  m_Sprite: {fileID: -88532625, guid: 1c63c96d699d1ca43b05e802446c9303, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4702,7 +4702,7 @@ MonoBehaviour:
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
   m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
+  m_enableExtraPadding: 1
   checkPaddingRequired: 0
   m_isRichText: 1
   m_EmojiFallbackSupport: 1
@@ -6391,7 +6391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -986109228, guid: 303fa242999882c48889efda903eddd1, type: 3}
+  m_Sprite: {fileID: 1789276460, guid: 1c63c96d699d1ca43b05e802446c9303, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

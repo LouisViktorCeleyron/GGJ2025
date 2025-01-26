@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aad0c41071d25aa4bbe7508dc0752f9c
+guid: 1c63c96d699d1ca43b05e802446c9303
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_Chara_002_0
+      name: T_Emote_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,14 +112,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 739b337e26ad96949b4df10d3904d9c8
-      internalID: 879547311
+      spriteID: 73611942c1254ca4ab8f65fd2f5d1b29
+      internalID: -88532625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Chara_002_1
+      name: T_Emote_1
       rect:
         serializedVersion: 2
         x: 512
@@ -134,14 +134,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf2bf2c2276b84345b2ec1a629064551
-      internalID: -420406338
+      spriteID: f7a4e0e4e0ed86143a8d8effc72a1dc4
+      internalID: 1783814606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Chara_002_2
+      name: T_Emote_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7226008f4a821cd41814a883dadad77a
+      internalID: -1981405049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Emote_3
       rect:
         serializedVersion: 2
         x: 0
@@ -156,14 +178,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6444eb9f0ba0146418010684e7b4d3d0
-      internalID: 724592517
+      spriteID: 94aabb957c3f17e438e8060299d0bd20
+      internalID: 1789276460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Chara_002_3
+      name: T_Emote_4
       rect:
         serializedVersion: 2
         x: 512
@@ -178,14 +200,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 514eb0c257339e248a51260e9272525a
-      internalID: -1118677723
+      spriteID: b61eecd1f7f7c25488c5f77a32a945f3
+      internalID: -630626085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Chara_002_4
+      name: T_Emote_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fa4977ceddb274e9b6f5b525e6a409
+      internalID: 2008362389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Emote_6
       rect:
         serializedVersion: 2
         x: 0
@@ -200,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b683c9b035797a459d4414e74b684f2
-      internalID: 1550679958
+      spriteID: b8435d6cfdde7ea49a7abc61bce3d361
+      internalID: 225315118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Chara_002_5
+      name: T_Emote_7
       rect:
         serializedVersion: 2
         x: 512
@@ -222,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d421449cd82f3e498c0330e64a1cfc4
-      internalID: 1236977692
+      spriteID: c52a6a71fa4dfc7418d9c698840e7341
+      internalID: -883481690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Chara_002_6
+      name: T_Emote_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -244,14 +288,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b892b609923166249a7a939fd4b739c9
-      internalID: 914067670
+      spriteID: e42a53d7bacfa0e49b446c72f19af899
+      internalID: 2102725023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Chara_002_7
+      name: T_Emote_9
       rect:
         serializedVersion: 2
         x: 0
@@ -266,14 +310,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a4eb522fdd289b44b28ef8d4fba18ab
-      internalID: 1021789842
+      spriteID: cd0f46817766a8548bbe651d1cadd579
+      internalID: -1623249094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_Chara_002_8
+      name: T_Emote_10
       rect:
         serializedVersion: 2
         x: 512
@@ -288,8 +332,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abf16b6476787d54aa0406c8f5ee43dc
-      internalID: 192766240
+      spriteID: 866332e6e4a98c74aacd5fd11615bc0e
+      internalID: -1229656331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Emote_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca05283434b228498c29b6db95aca46
+      internalID: 651443208
       vertices: []
       indices: 
       edges: []
@@ -298,7 +364,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5d9bb469c190cdb4784d022dfb6e3b6e
+    spriteID: 8f3893f7c8d11cd45a5058ab6d13c517
     internalID: 0
     vertices: []
     indices: 
@@ -308,15 +374,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      T_Chara_002_0: 879547311
-      T_Chara_002_1: -420406338
-      T_Chara_002_2: 724592517
-      T_Chara_002_3: -1118677723
-      T_Chara_002_4: 1550679958
-      T_Chara_002_5: 1236977692
-      T_Chara_002_6: 914067670
-      T_Chara_002_7: 1021789842
-      T_Chara_002_8: 192766240
+      T_Emote_0: -88532625
+      T_Emote_1: 1783814606
+      T_Emote_10: -1229656331
+      T_Emote_11: 651443208
+      T_Emote_2: -1981405049
+      T_Emote_3: 1789276460
+      T_Emote_4: -630626085
+      T_Emote_5: 2008362389
+      T_Emote_6: 225315118
+      T_Emote_7: -883481690
+      T_Emote_8: 2102725023
+      T_Emote_9: -1623249094
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,8 +12,14 @@ public class OnBubbleContact : VolleyBulleGO
         var bubble = collision.gameObject.GetComponent<BubbleReferencer>();
         if (bubble != null)
         {
-            var isDead = bubble.BulleLife.ReduceHp(_damage); 
-            bubble.BubbleMovement.Bounce(bounciness,!isDead);
+            if (_damage > 0)
+            {
+                var isDead = bubble.BulleLife.ReduceHp(_damage);
+            }
+            else
+            {
+                bubble.BubbleMovement.Bounce(bounciness, true);
+            }
         }
     }
 }

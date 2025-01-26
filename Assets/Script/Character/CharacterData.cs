@@ -4,5 +4,5 @@ using UnityEngine;
 public class CharacterData : ScriptableObject
 {
     public string characterName, characterDescription;
-    public Sprite spriteIdle, spriteBlow, icon;
+    public Sprite spriteIdle, spriteBlow, icon, iconH,InconU;
 }
