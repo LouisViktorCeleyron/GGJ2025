@@ -170,6 +170,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onBreathChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4350287328588877973}
+        m_TargetAssemblyTypeName: PlayerUIModule, Assembly-CSharp
+        m_MethodName: UpdareBreath
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _speed: 4
   _xBoost: 1.5
   _zBoost: 1.1
@@ -203,3 +218,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoretext: {fileID: 0}
   _face: {fileID: 0}
+  _breath: {fileID: 0}
