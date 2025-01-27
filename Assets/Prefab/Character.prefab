@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 2936975435176607896}
   - component: {fileID: 7209218076623550090}
   - component: {fileID: 4350287328588877973}
-  m_Layer: 0
+  - component: {fileID: 9199944858098458264}
+  m_Layer: 2
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player2: 0
+  _animator: {fileID: 9199944858098458264}
   _launch: 0
   _rgbd: {fileID: 2936975435176607896}
   _spriteRenderer: {fileID: 2436094883832937467}
@@ -219,3 +221,25 @@ MonoBehaviour:
   _scoretext: {fileID: 0}
   _face: {fileID: 0}
   _breath: {fileID: 0}
+--- !u!95 &9199944858098458264
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312934265996157842}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 73509129d7187ed46826135d84fdfa3e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
