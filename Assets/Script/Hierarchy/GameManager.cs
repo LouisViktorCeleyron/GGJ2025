@@ -26,6 +26,11 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timerText;
 
     [SerializeField]
+    private AudioClip _audioClipMM, _acP;
+    [SerializeField]
+    private AudioSource _audioSource;
+
+    [SerializeField]
     private float _netTolerance = .3f, _timerMax = 120;
     private float _timer=30;
     private void Awake()
@@ -39,6 +44,20 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+    }
+
+    public void PlayMusic(bool mainMenu)
+    {
+        _audioSource.Stop();
+        if(mainMenu) 
+        {
+            _audioSource.clip = _audioClipMM;
+        }
+        else
+        {
+            _audioSource.clip = _acP;
+        }
+        _audioSource.Play();
     }
 
     public void ResetGM()

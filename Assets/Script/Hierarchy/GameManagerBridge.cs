@@ -22,5 +22,6 @@ public class GameManagerBridge : VolleyBulleGO
             _GameManager.timerText = _timerText;
             _GameManager.StartGameplay();
         }
+        _GameManager.PlayMusic(_mainMenu);
     }
 }
