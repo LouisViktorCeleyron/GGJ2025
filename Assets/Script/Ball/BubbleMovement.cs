@@ -7,6 +7,14 @@ public class BubbleMovement : VolleyBulleGO
     private Rigidbody _rigidbody; 
     [SerializeField]
     private float _power=100;
+    [SerializeField]
+    private LayerMask _layerMask;
+    public bool isGrounded,isNextToWall;
+    private void FixedUpdate()
+    {
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, out var h,  1.1f, _layerMask);
+        isNextToWall = Physics.Raycast(transform.position + Vector3.left * 1.1f, Vector3.right, out var i,2.2f, _layerMask) ;
+    }
 
     public void Bounce(Vector3 direction, bool removeOnlyYVelocity = false)
     {
@@ -20,6 +28,11 @@ public class BubbleMovement : VolleyBulleGO
         {
             _rigidbody.AddForce(direction * _power);
         }
+    }
+
+    private void OnGUI()
+    {
+        GUILayout.Label($"je suis grounded + {isGrounded} je suis contre un mur {isNextToWall}");
     }
 
 }

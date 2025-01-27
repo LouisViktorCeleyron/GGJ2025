@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,10 +15,13 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Character _leftChar, _rightChar;
     [SerializeField]
-    private CharacterData _dataLeft, _dataRight;  
+    private CharacterData _dataLeft, _dataRight;
 
     [SerializeField]
-    private float _netTolerance = .3f;
+    private TextMeshProUGUI _timerText;
+
+    [SerializeField]
+    private float _netTolerance = .3f, _timer = 120;
     private void Awake()
     {
         if (instance == null)
@@ -35,9 +39,12 @@ public class GameManager : MonoBehaviour
     }
 
     private bool _isLeftPlayerEngage = false;
-    public void LaunchEngage(bool waitTime = true)
+    public void LaunchEngage(bool waitTime = true, bool countPoint  = true)
     {
-        CountPoint();
+        if(countPoint)
+        {
+            CountPoint();
+        }
         _isLeftPlayerEngage = Random.Range(0f, 1f) > .5f;
         bubbleReference.transform.position = _isLeftPlayerEngage? engageTransformL.position : engageTransformR.position;
         bubbleReference.Rigidbody.useGravity = false;
@@ -64,7 +71,15 @@ public class GameManager : MonoBehaviour
         return bubbleReference != null && engageTransformL !=null && engageTransformR != null;
     }
 
-
+    public IEnumerator Timer()
+    {
+        while(_timer>=0)
+        {
+            yield return new WaitForSeconds(1);
+            _timer -= 1;
+            _timerText.text = _timer.ToString("000");
+        }
+    }
     public IEnumerator DelayedAction(UnityAction action, float f = 1)
     {
         yield return new WaitForSeconds(f);
@@ -73,7 +88,10 @@ public class GameManager : MonoBehaviour
     private IEnumerator WaitForLaunch()
     {
         yield return new WaitUntil(IsSetUp);
-        LaunchEngage();
+        LaunchEngage(true, false);
+        _timerText.text = _timer.ToString("000");
+        StartCoroutine(Timer()); 
+
     }
 
     private void CountPoint()
@@ -81,6 +99,7 @@ public class GameManager : MonoBehaviour
         var bPos = bubbleReference.transform.position;
         var netMin = engageTransformL.position.x - _netTolerance;
         var netMax = engageTransformR.position.x + _netTolerance;
+        
         if(bPos.x < netMin)
         {
             _rightChar.RiseScore(1);

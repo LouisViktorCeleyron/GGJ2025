@@ -8,6 +8,8 @@ public class Character : VolleyBulleGO
     [SerializeField]
     private bool _player2;
     [SerializeField]
+    private Animator _animator;
+    [SerializeField]
     private KeyCode _launch;
     private string _hAxName, _vAxName;
     [Header("Refs")]
@@ -20,6 +22,7 @@ public class Character : VolleyBulleGO
     private UnityEvent <CharacterData>_initEvent;
     [SerializeField]
     private UnityEvent<float> _onBreathChange;
+
 
     public void Initialize(CharacterData data)
     {
@@ -41,6 +44,26 @@ public class Character : VolleyBulleGO
         _vAxName = _player2 ? "Vertical2" : "Vertical";
     }
 
+
+    private void FixedUpdate()
+    {
+        _velocity.x = _hAxis = Input.GetAxisRaw(_hAxName);
+        _velocity.z = _vAxis = Input.GetAxisRaw(_vAxName);
+        
+        _animator.SetBool("IsWalking",_velocity.magnitude > 0);
+
+        _velocity = _velocity.normalized * _speed * Time.fixedDeltaTime;
+        
+
+        _rgbd.MovePosition(_rgbd.position + _velocity);
+    }
+
+
+    [Header("Blow")]
+    private bool _isBlowing, _recoverBlow;
+    private float _breath = 1;
+
+
     void Update()
     {
         if (Input.GetKey(_launch))
@@ -50,49 +73,43 @@ public class Character : VolleyBulleGO
         if (Input.GetKeyUp(_launch))
         {
             _isBlowing = false;
+            _recoverBlow = false;
         }
-        if (_blowingJauge < 1 && !_isBlowing)
+        if (!_isBlowing)
         {
             UnBlow();
         }
-
     }
-
-    private void FixedUpdate()
-    {
-        _velocity.x = _hAxis = Input.GetAxisRaw(_hAxName);
-        _velocity.z = _vAxis = Input.GetAxisRaw(_vAxName);
-
-        _velocity = _velocity.normalized * _speed * Time.fixedDeltaTime;
-
-        _rgbd.MovePosition(_rgbd.position + _velocity);
-    }
-
-
-    [Header("Blow")]
-    private bool _isBlowing;
-    private float _blowingJauge;
-    
-    
 
     private void Blow()
     {
+        if(_breath<=0)
+        {
+            _isBlowing=false;
+            _recoverBlow = true;
+            return;
+        }
+        if(_recoverBlow && _breath<=.5f)
+        {
+            return; 
+        }
+        _recoverBlow =false;
         _isBlowing = true;
-        UpdateBlow(.1f);
+        UpdateBlow(-2);
         _spriteRenderer.sprite = _characterData.spriteBlow;
     }
 
     private void UnBlow()
     {
-        UpdateBlow(.05f);
+        UpdateBlow(1);
         _spriteRenderer.sprite = _characterData.spriteIdle;
     }
 
     private void UpdateBlow(float amount)
     {
-        _blowingJauge += amount;
-        _blowingJauge = Mathf.Clamp01(_blowingJauge);
-        _onBreathChange.Invoke(_blowingJauge);
+        _breath += amount*Time.deltaTime;
+        _breath = Mathf.Clamp01(_breath);
+        _onBreathChange.Invoke(_breath);
     }
     
     private void OnCollisionEnter(Collision collision)
@@ -104,9 +121,10 @@ public class Character : VolleyBulleGO
             var bubbleCollision = bubbleRef.BubbleMovement;
             if(!bubbleRef.BulleLife.IsDead)
             {
-                var frwrdV = Vector3.forward * Mathf.Abs(_vAxis)* _zBoost *Mathf.Sign(_vAxis);
+                var frwrdV = Vector3.forward * (Mathf.Abs(_vAxis)* _zBoost *Mathf.Sign(_vAxis)+ Random.Range(-.25f, .25f));
                 var rightV = Vector3.right * Mathf.Max(1, _hAxis * _xBoost)*Mathf.Sign(_xBoost);
-                bubbleCollision.Bounce(rightV+frwrdV+Vector3.up*_yBoost);
+                var upBonus = (_isBlowing ? 1f:1.25f) + (bubbleCollision.isGrounded?.5f:0);
+                bubbleCollision.Bounce(rightV+frwrdV+Vector3.up*upBonus*_yBoost);
             }
             
             if(!_isBlowing)
