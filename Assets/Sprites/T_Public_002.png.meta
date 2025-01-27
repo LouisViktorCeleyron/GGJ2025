@@ -272,6 +272,72 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: T_Public_002_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755977e31eccc6746a40f284aa0f8b8d
+      internalID: 418752894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_002_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515b5819c196b69489ba20a77a19e4d3
+      internalID: -1530855078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Public_002_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1207d6741d81d1942870ce27c31ae9e9
+      internalID: 1185739722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -288,12 +354,15 @@ TextureImporter:
     nameFileIdTable:
       T_Public_002_0: -1662580129
       T_Public_002_1: -1382793242
+      T_Public_002_10: 1185739722
       T_Public_002_2: 315895585
       T_Public_002_3: -796522608
       T_Public_002_4: -1544058326
       T_Public_002_5: -548386433
       T_Public_002_6: -1273889716
       T_Public_002_7: -363207726
+      T_Public_002_8: 418752894
+      T_Public_002_9: -1530855078
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
