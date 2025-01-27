@@ -11,7 +11,7 @@ public class LaunchWithDelay : MonoBehaviour
 
     void Start()
     {
-        
+        StartCoroutine(Launch());   
     }
 
     private IEnumerator Launch()
