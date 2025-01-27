@@ -15,8 +15,8 @@ public class BubbleLife : VolleyBulleGO
 
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
-
-
+    [SerializeField]
+    private ParticleSystem _particleSystem;
     [SerializeField]
     private float _invincibilityFrames = 1;
 
@@ -40,7 +40,14 @@ public class BubbleLife : VolleyBulleGO
         }
         return false;
     }
-
+    private IEnumerator LaunchReset()
+    {
+        yield return new WaitForSeconds(1);
+        _particleSystem.Clear();
+        _particleSystem.Stop();
+        _GameManager.LaunchEngage();
+        _spriteRenderer.enabled = true;
+    }
     private IEnumerator InvincibilityFrames()
     {
         _isInvincible = true;
@@ -59,14 +66,20 @@ public class BubbleLife : VolleyBulleGO
         {
             return false;
         }
-        StartCoroutine(InvincibilityFrames());
-        return SetHP(_hp-amount);
+        var b = SetHP(_hp - amount);
+        if(!b) 
+        {
+            StartCoroutine(InvincibilityFrames());
+        }
+        return b;
     }
 
 
 
     public void Pop()
-    {
-        _GameManager.LaunchEngage();
+    {   
+        _particleSystem.Play ();
+        _spriteRenderer.enabled = false;
+        StartCoroutine(LaunchReset());
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc1f4f5c5acb4e84d95fc7995dfc095b, type: 3}
   m_Name: Cochon
   m_EditorClassIdentifier: 
-  characterName: Gros Porc
+  characterName: Leon
   characterDescription: 
   spriteIdle: {fileID: 748281909, guid: 303fa242999882c48889efda903eddd1, type: 3}
   spriteBlow: {fileID: -542570357, guid: 303fa242999882c48889efda903eddd1, type: 3}

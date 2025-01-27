@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc1f4f5c5acb4e84d95fc7995dfc095b, type: 3}
   m_Name: Lapin
   m_EditorClassIdentifier: 
-  characterName: Lapinou
-  characterDescription: 
+  characterName: Robert
+  characterDescription: Robert is one hell of a hare.
   spriteIdle: {fileID: -1824963668, guid: 303fa242999882c48889efda903eddd1, type: 3}
   spriteBlow: {fileID: -258777803, guid: 303fa242999882c48889efda903eddd1, type: 3}
   icon: {fileID: -1623249094, guid: 1c63c96d699d1ca43b05e802446c9303, type: 3}

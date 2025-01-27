@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
 
     public Character leftChar, rightChar;
     [SerializeField]
-    private CharacterData _dataLeft, _dataRight;
+    private CharacterData _dataLeft, _dataRight, _winner;
+    public CharacterData LeftChar => _dataLeft;
+    public CharacterData RightChar => _dataRight;
+    public CharacterData Winner => _winner;
     public bool LeftSelected => _dataLeft != null;
     public bool RightSelected => _dataRight != null;
 
@@ -23,7 +26,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timerText;
 
     [SerializeField]
-    private float _netTolerance = .3f, _timer = 120;
+    private float _netTolerance = .3f, _timerMax = 120;
+    private float _timer=30;
     private void Awake()
     {
         if (instance == null)
@@ -35,6 +39,16 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+    }
+
+    public void ResetGM()
+    {
+        leftChar = null;
+        rightChar = null;  
+        _dataLeft = null;
+        _dataRight = null;
+        _winner = null;
+        _timer = _timerMax;
     }
 
     public void SetPlayer(CharacterData data, bool playerTwo)
@@ -63,6 +77,10 @@ public class GameManager : MonoBehaviour
     private bool _isLeftPlayerEngage = false;
     public void LaunchEngage(bool waitTime = true, bool countPoint  = true)
     {
+        if(_timer<=0)
+        {
+            return;
+        }
         if(countPoint)
         {
             CountPoint();
@@ -100,7 +118,26 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             _timer -= 1;
             timerText.text = _timer.ToString("000");
+            if(_timer<0)
+            {
+                SetWinner();
+            }
         }
+    }
+
+    private void SetWinner()
+    {
+        StopAllCoroutines();
+        if(leftChar.Score>rightChar.Score)
+        {
+            _winner = _dataLeft;
+        }
+        if (leftChar.Score < rightChar.Score)
+        {
+            _winner = _dataRight;
+        }
+        SceneManager.LoadScene(3);
+
     }
     public IEnumerator DelayedAction(UnityAction action, float f = 1)
     {
@@ -111,7 +148,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitUntil(IsSetUp);
         LaunchEngage(true, false);
-        timerText.text = _timer.ToString("000");
+        timerText.text = _timerMax.ToString("000");
         StartCoroutine(Timer()); 
 
     }

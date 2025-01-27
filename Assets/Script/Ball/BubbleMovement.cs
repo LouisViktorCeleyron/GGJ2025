@@ -1,4 +1,3 @@
-using Mono.Cecil.Cil;
 using UnityEngine;
 
 public class BubbleMovement : VolleyBulleGO
@@ -28,11 +27,6 @@ public class BubbleMovement : VolleyBulleGO
         {
             _rigidbody.AddForce(direction * _power);
         }
-    }
-
-    private void OnGUI()
-    {
-        GUILayout.Label($"je suis grounded + {isGrounded} je suis contre un mur {isNextToWall}");
     }
 
 }

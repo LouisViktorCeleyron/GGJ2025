@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Pingouin
   m_EditorClassIdentifier: 
   characterName: Louis Jr
-  characterDescription: petit mais puissant mais faites gaffe, il a le covid
+  characterDescription: Tiny but powerfull, he has a nasty cold though, try to not
+    get it from him
   spriteIdle: {fileID: 879547311, guid: aad0c41071d25aa4bbe7508dc0752f9c, type: 3}
   spriteBlow: {fileID: -420406338, guid: aad0c41071d25aa4bbe7508dc0752f9c, type: 3}
   icon: {fileID: -88532625, guid: 1c63c96d699d1ca43b05e802446c9303, type: 3}

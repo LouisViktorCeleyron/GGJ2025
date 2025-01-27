@@ -22,6 +22,8 @@ public class Character : VolleyBulleGO
     private UnityEvent <CharacterData>_initEvent;
     [SerializeField]
     private UnityEvent<float> _onBreathChange;
+    [SerializeField]
+    private ParticleSystem _ps;
 
 
     public void Initialize(CharacterData data)
@@ -29,7 +31,7 @@ public class Character : VolleyBulleGO
         _characterData = data;
         SpriteRenderer spriteRenderer = _spriteRenderer;
         _initEvent.Invoke(data);
-        ChangeScore(0);
+        ChangeScore(0,false);
     }
 
     [Header("Movement")]
@@ -59,7 +61,16 @@ public class Character : VolleyBulleGO
         _velocity.x = _hAxis = Input.GetAxisRaw(_hAxName);
         _velocity.z = _vAxis = Input.GetAxisRaw(_vAxName);
         
-        _animator.SetBool("IsWalking",_velocity.magnitude > 0);
+        var isWalking = _velocity.magnitude > 0;
+        _animator.SetBool("IsWalking",isWalking);
+        if (isWalking)
+        {
+            _ps.Play();
+        }
+        else
+        {
+            _ps.Stop();
+        }
 
         _velocity = _velocity.normalized * _speed * Time.fixedDeltaTime;
         
@@ -147,15 +158,19 @@ public class Character : VolleyBulleGO
 
     [Header("Score")]
     private int _score;
+    public int Score => _score;
     [SerializeField]
     private UnityEvent<int> _onScoreChanged;
     public void RiseScore(int amount)
     {
         ChangeScore(_score+amount);
     }
-    public void ChangeScore(int score)
+    public void ChangeScore(int score, bool fb = true)
     {
         _score = score;
-        _onScoreChanged.Invoke(score);
+        if(fb)
+        {
+            _onScoreChanged.Invoke(score);
+        }
     }
 }

@@ -12,7 +12,13 @@ public class UISelectionChar : VolleyBulleGO
     private CharacterData _characterData;
     void Start()
     {
-        _name .text= _characterData.characterName;
+        UpdateChar(_characterData);
+    }
+
+    public void UpdateChar(CharacterData characterData)
+    {
+        _characterData = characterData;
+        _name.text = _characterData.characterName;
         _face.sprite = _characterData.icon;
     }
 

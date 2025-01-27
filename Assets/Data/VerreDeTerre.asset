@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: VerreDeTerre
   m_EditorClassIdentifier: 
   characterName: Jimmy
-  characterDescription: "Ver deter,imb\xE9cile heureux avec une h\xE9lice du feu
-    de dieu "
+  characterDescription: Dynamic Lombric, he's one happy himbo proud of his propeller
+    cap
   spriteIdle: {fileID: 1550679958, guid: aad0c41071d25aa4bbe7508dc0752f9c, type: 3}
   spriteBlow: {fileID: 1236977692, guid: aad0c41071d25aa4bbe7508dc0752f9c, type: 3}
   icon: {fileID: 1789276460, guid: 1c63c96d699d1ca43b05e802446c9303, type: 3}

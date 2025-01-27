@@ -8,17 +8,19 @@ public class GameManagerBridge : VolleyBulleGO
     private Transform _engageTransformL, _engageTransformR;
     [SerializeField] private TextMeshProUGUI _timerText;
 
+    [SerializeField] private bool _mainMenu;
     void Start()
     {
-        _GameManager.engageTransformL = _engageTransformL;
-        _GameManager.engageTransformR = _engageTransformR;
-        _GameManager.timerText = _timerText;
-        _GameManager.StartGameplay();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(_mainMenu)
+        {
+            _GameManager.ResetGM();
+        }
+        else
+        {
+            _GameManager.engageTransformL = _engageTransformL;
+            _GameManager.engageTransformR = _engageTransformR;
+            _GameManager.timerText = _timerText;
+            _GameManager.StartGameplay();
+        }
     }
 }
