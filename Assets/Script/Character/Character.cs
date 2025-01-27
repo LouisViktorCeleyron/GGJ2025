@@ -11,6 +11,7 @@ public class Character : VolleyBulleGO
     private Animator _animator;
     [SerializeField]
     private KeyCode _launch;
+    private string _buttonName;
     private string _hAxName, _vAxName;
     [Header("Refs")]
     [SerializeField]
@@ -40,8 +41,17 @@ public class Character : VolleyBulleGO
 
     private void Awake()
     {
+        _buttonName = _player2?"Fire1":"Fire2";
         _hAxName = _player2 ? "Horizontal2" : "Horizontal";
         _vAxName = _player2 ? "Vertical2" : "Vertical";
+        if(_player2 ) 
+        {
+            _GameManager.leftChar = this;
+        }
+        else
+        {
+            _GameManager.rightChar = this;
+        }
     }
 
 
@@ -66,11 +76,11 @@ public class Character : VolleyBulleGO
 
     void Update()
     {
-        if (Input.GetKey(_launch))
+        if (Input.GetButton(_buttonName))
         {
             Blow();
         }
-        if (Input.GetKeyUp(_launch))
+        if (Input.GetButtonUp(_buttonName))
         {
             _isBlowing = false;
             _recoverBlow = false;

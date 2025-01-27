@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class UISelectionChar : MonoBehaviour
+public class UISelectionChar : VolleyBulleGO
 {
     [SerializeField]
     private TextMeshProUGUI _name;
@@ -16,9 +16,10 @@ public class UISelectionChar : MonoBehaviour
         _face.sprite = _characterData.icon;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Select(bool playerTwo)
     {
-        
+        _face.sprite = _characterData.iconH;
+        _GameManager.SetPlayer(_characterData, playerTwo);
     }
+
 }

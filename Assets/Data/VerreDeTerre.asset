@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc1f4f5c5acb4e84d95fc7995dfc095b, type: 3}
   m_Name: VerreDeTerre
   m_EditorClassIdentifier: 
-  characterName: Lombric
-  characterDescription: 
+  characterName: Jimmy
+  characterDescription: "Ver deter,imb\xE9cile heureux avec une h\xE9lice du feu
+    de dieu "
   spriteIdle: {fileID: 1550679958, guid: aad0c41071d25aa4bbe7508dc0752f9c, type: 3}
   spriteBlow: {fileID: 1236977692, guid: aad0c41071d25aa4bbe7508dc0752f9c, type: 3}
   icon: {fileID: 1789276460, guid: 1c63c96d699d1ca43b05e802446c9303, type: 3}

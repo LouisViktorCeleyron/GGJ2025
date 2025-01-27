@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
@@ -12,13 +13,14 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public BubbleReferencer bubbleReference;
 
-    [SerializeField]
-    private Character _leftChar, _rightChar;
+    public Character leftChar, rightChar;
     [SerializeField]
     private CharacterData _dataLeft, _dataRight;
+    public bool LeftSelected => _dataLeft != null;
+    public bool RightSelected => _dataRight != null;
 
-    [SerializeField]
-    private TextMeshProUGUI _timerText;
+    [HideInInspector]
+    public TextMeshProUGUI timerText;
 
     [SerializeField]
     private float _netTolerance = .3f, _timer = 120;
@@ -27,15 +29,35 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            StartCoroutine(WaitForLaunch());
-            _leftChar.Initialize(_dataLeft);
-            _rightChar.Initialize(_dataRight);
             DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(this);
         }
+    }
+
+    public void SetPlayer(CharacterData data, bool playerTwo)
+    {
+        if(playerTwo)
+        {
+            _dataLeft = data;
+        }
+        else
+        {
+            _dataRight = data;
+        }
+        if(_dataLeft != null && _dataRight!= null) 
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
+    public void StartGameplay()
+    {
+        StartCoroutine(WaitForLaunch());
+        leftChar.Initialize(_dataLeft);
+        rightChar.Initialize(_dataRight);
+
     }
 
     private bool _isLeftPlayerEngage = false;
@@ -68,7 +90,7 @@ public class GameManager : MonoBehaviour
 
     private bool IsSetUp()
     {
-        return bubbleReference != null && engageTransformL !=null && engageTransformR != null;
+        return bubbleReference != null && engageTransformL !=null && engageTransformR != null && rightChar != null && leftChar != null;
     }
 
     public IEnumerator Timer()
@@ -77,7 +99,7 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             _timer -= 1;
-            _timerText.text = _timer.ToString("000");
+            timerText.text = _timer.ToString("000");
         }
     }
     public IEnumerator DelayedAction(UnityAction action, float f = 1)
@@ -89,7 +111,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitUntil(IsSetUp);
         LaunchEngage(true, false);
-        _timerText.text = _timer.ToString("000");
+        timerText.text = _timer.ToString("000");
         StartCoroutine(Timer()); 
 
     }
@@ -102,12 +124,12 @@ public class GameManager : MonoBehaviour
         
         if(bPos.x < netMin)
         {
-            _rightChar.RiseScore(1);
+            rightChar.RiseScore(1);
             return;
         }
         if (bPos.x > netMax)
         {
-            _leftChar.RiseScore(1);
+            leftChar.RiseScore(1);
             return ;
         }
 
